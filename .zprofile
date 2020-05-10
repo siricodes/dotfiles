@@ -1,10 +1,15 @@
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 
-# XDG standards
-export XDG_CONFIG_HOME="$HOME/.config"		# Configuration
-export XDG_CACHE_HOME="$HOME/.cache"		# Cache directory
-export XDG_DATA_HOME="$HOME/.local/share"	# Other useful data (fonts, lists, etc)
+# Default applications
+export BROWSER="qutebrowser"
+export EDITOR="nvim"
+export READER="zathura"
+export TERMINAL="st"
+export VIDEO="mpv"
+
+# XDG standards (from LukeSmithXyz)
+eval "$(sed 's/^[^#].*/export &/g;t;d' ~/.config/user-dirs.dirs)"
 
 # Set ZSH-related variables
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"		# Zsh config directory (zshrc)
@@ -71,3 +76,6 @@ ex=🎯:\
 *.part=💔:\
 *.torrent=🔽:\
 "
+
+# Start graphical server on tty1 if not already running.
+[ "$(tty)" = "/dev/tty1" ] && ! ps -e | grep -qw Xorg && exec startx
