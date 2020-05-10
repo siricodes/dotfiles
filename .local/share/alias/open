@@ -1,0 +1,4 @@
+# Opens files from XDG Directories using default apps
+# Supports completions as well <3
+book() {$READER $HOME/Videos/$1} ; compdef '_files -W $HOME/Books' book
+vid() {$VIDEO $HOME/Videos/$1} ; compdef '_files -W $HOME/Videos' vid
