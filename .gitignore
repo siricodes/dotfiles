@@ -1,9 +1,9 @@
 ## Ignore everything
 *
+## Whitelist
 
-## EXCEPT:
 !.gitignore
+!.config
 !.config/**
-!/banana/**
-!.local/*
-!.zprofile/*
+!banana/**
+
