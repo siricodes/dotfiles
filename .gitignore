@@ -3,6 +3,7 @@
 
 ## EXCEPT:
 !.gitignore
-!.config/*
+!.config/**
+!/banana/**
 !.local/*
 !.zprofile/*
