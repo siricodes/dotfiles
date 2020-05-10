@@ -9,7 +9,7 @@ export TERMINAL="st"
 export VIDEO="mpv"
 
 # XDG standards (from LukeSmithXyz)
-eval "$(sed 's/^[^#].*/export &/g;t;d' ~/.config/user-dirs.dirs)"
+eval "$(sed 's/^[^#].*/export &/g;t;d' ${HOME}/.config/user-dirs.dirs)"
 
 # Set ZSH-related variables
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"		# Zsh config directory (zshrc)
