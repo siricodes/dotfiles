@@ -1,0 +1,8 @@
+## Ignore everything
+*
+
+## EXCEPT:
+!.gitignore
+!.config/*
+!.local/*
+!.zprofile/*
