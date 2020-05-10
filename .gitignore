@@ -1,9 +1,17 @@
 ## Ignore everything
 *
-## Whitelist
 
+## Whitelist
+### 01. Git
 !.gitignore
+### 02. Directories
 !.config
 !.config/**
-!banana/**
+!.local
+!.local/**
+
+## Clean-up 
+.zcompdump*
+
+
 
