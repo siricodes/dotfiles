@@ -1,3 +1,0 @@
-# Set the wallpaper using a symlink
-ln -sf $XDG_PICTURES_DIR/$1 $XDG_PICTURES_DIR/wallpaper
-wallpaper
