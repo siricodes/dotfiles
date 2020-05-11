@@ -1,0 +1,2 @@
+# Displays the wallpaper
+feh --bg-fill $XDG_PICTURES_DIR/wallpaper

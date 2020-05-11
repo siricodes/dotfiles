@@ -1,0 +1,3 @@
+# Sets symlink for wallpaper then calls the wallpaper script to display it
+ln -sfr $1 $XDG_PICTURES_DIR/wallpaper
+wallpaper
