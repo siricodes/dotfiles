@@ -1,2 +1,3 @@
 [ -f ~/.xprofile ] && . ~/.xprofile
+ssh-agent
 exec i3
