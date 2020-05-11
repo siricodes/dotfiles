@@ -1,4 +1,20 @@
+## Brightness keys
+
 XF86MonBrightnessDown
 	xbacklight -dec 15
 XF86MonBrightnessUp
 	xbacklight -inc 15
+
+## Media keys
+XF86AudioMute
+	amixer sset Master toggle; pkill -RTMIN+10 blocks
+XF86Audio{Raise,Lower}Volume
+	amixer sset Master 5%{+,-}; pkill -RTMIN+10 blocks
+XF86Audio{Next,Prev}
+	mpc {next,prev}
+XF86Audio{Pause,Play,Stop}
+	mpc {pause,play,stop}
+XF86Audio{Rewind,Forward}
+	mpc seek {-,+}10
+XF86Tools
+	$TERMINAL -e ncmpcpp
