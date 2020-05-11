@@ -2,16 +2,19 @@
 *
 
 ## Whitelist
-### 01. Git
+# 01. Git
 !.gitignore
-### 02. Directories
+# 02. Directories
 !.config
 !.config/**
 !.local
 !.local/**
 
 ## Clean-up 
+# 01. ZSH
 .zcompdump*
+# 02. PulseAudio
+cookie
 
 
 
