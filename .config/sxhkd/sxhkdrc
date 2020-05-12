@@ -2,7 +2,7 @@
 ## Apps
 #### dmenu
 super + d
-	dmenu -show run
+	dmenu_run
 #### Terminal
 super + Return
 	$TERMINAL
