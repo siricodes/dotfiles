@@ -1,9 +1,15 @@
 # Basic bindings
 ## Apps
-#### dmenu
+### dmenu
 super + d
 	dmenu_run
-#### Terminal
+### copy-paste passwords
+super + o
+	dmenu-pass
+### emoji input
+super + p
+	dmenu-emoji-input
+### Terminal
 super + Return
 	$TERMINAL
 
