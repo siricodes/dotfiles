@@ -1,2 +1,4 @@
 # Speedtest
 alias spd="speedtest --secure"
+# Get qr code from screen
+alias qrscreen="maim | zbarimg -q --raw -"
