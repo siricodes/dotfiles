@@ -1,0 +1,8 @@
+[caps-lock]
+command=xset -q | grep Caps | awk '{ print $2, $3, $4 }'
+interval=once
+signal=10
+
+[time]
+command=date +'%a %F %H:%M:%S'
+interval=1
