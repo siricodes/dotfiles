@@ -160,22 +160,22 @@ bindsym $Mod+r mode "resize"
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set_from_resource $base00 *color0 #1d2021
-set_from_resource $base01 *color18 #3c3836
-set_from_resource $base02 *color19 #504945
-set_from_resource $base03 *color8 #665c54
-set_from_resource $base04 *color20 #bdae93
-set_from_resource $base05 *color7 #d5c4a1
-set_from_resource $base06 *color21 #ebdbb2
-set_from_resource $base07 *color15 #fbf1c7
-set_from_resource $base08 *color1 #fb4934
-set_from_resource $base09 *color16 #fe8019
-set_from_resource $base0A *color3 #fabd2f
-set_from_resource $base0B *color2 #b8bb26
-set_from_resource $base0C *color6 #8ec07c
-set_from_resource $base0D *color12 #83a598
-set_from_resource $base0E *color13 #d3869b
-set_from_resource $base0F *color17 #d65d0e
+set_from_resource $base00 i3wm.color0 
+set_from_resource $base01 i3wm.color18
+set_from_resource $base02 i3wm.color19
+set_from_resource $base03 i3wm.color8 
+set_from_resource $base04 i3wm.color20
+set_from_resource $base05 i3wm.color7 
+set_from_resource $base06 i3wm.color21
+set_from_resource $base07 i3wm.color15
+set_from_resource $base08 i3wm.color1 
+set_from_resource $base09 i3wm.color16
+set_from_resource $base0A i3wm.color3 
+set_from_resource $base0B i3wm.color2 
+set_from_resource $base0C i3wm.color6 
+set_from_resource $base0D i3wm.color12 
+set_from_resource $base0E i3wm.color13 
+set_from_resource $base0F i3wm.color17 
 
 # Basic bar configuration using the Base16 variables.
 bar {
