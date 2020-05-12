@@ -1,4 +1,13 @@
 # Basic bindings
+## Apps
+#### dmenu
+super + d
+	dmenu -show run
+#### Terminal
+super + Return
+	$TERMINAL
+
+
 ## Lock
 super + x
 	i3lock
