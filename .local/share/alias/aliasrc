@@ -1,3 +1,5 @@
+# Source other alias files
+source $XDG_DATA_HOME/alias/open
 # Speedtest
 alias spd="speedtest --secure"
 # Get qr code from screen
