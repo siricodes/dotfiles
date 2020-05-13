@@ -1,6 +1,8 @@
 #!/bin/sh
 
 [[ -f $XDG_CONFIG_HOME/xresources ]] && xrdb -merge $XDG_CONFIG_HOME/xresources	# load xresources
+
+udiskie --tray &	# automount
 picom &			# picom for transparency
 sxhkd -r /dev/null &	# sxhkd
 wallpaper		# set wallpaper
