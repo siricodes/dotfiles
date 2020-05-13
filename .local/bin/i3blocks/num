@@ -1,0 +1,15 @@
+#!/bin/sh
+# Check for numlock status
+# Only outputs a color. Set label using 'label' variable in i3blocks
+status=$(xset -q | grep Num | awk '{print$8}')
+
+if [ "$status" = on ]  ; then
+#	status="■"
+	color="#00ff00"
+else
+#	status="■"
+	color="#d5c4a1"
+fi
+
+#echo -e "$status\n"
+echo -e "\n\n$color"

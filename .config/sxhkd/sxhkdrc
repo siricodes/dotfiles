@@ -43,6 +43,6 @@ XF86Audio{Rewind,Forward}
 XF86Tools
 	$TERMINAL -e ncmpcpp
 
-## Caps lock
-Caps_Lock
-	pkill -RTMIN+10 i3blocks 
+## Caps,Num lock
+@{Caps,Num}_Lock
+	pkill -RTMIN+{10,11} i3blocks 

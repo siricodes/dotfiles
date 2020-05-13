@@ -1,0 +1,15 @@
+#!/bin/sh
+# Check for caps status
+# Initialize colors
+status=$(xset -q | grep Caps | awk '{print$4}')
+
+if [ "$status" = on ]  ; then
+#	status="■"
+	color="#00ff00"
+else
+#	status="■"
+	color="#d5c4a1"
+fi
+
+#echo -e "$status\n"
+echo -e "\n\n$color"

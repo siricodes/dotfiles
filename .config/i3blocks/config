@@ -1,8 +1,31 @@
-[caps-lock]
-command=xset -q | grep Caps | awk '{ print $2, $3, $4 }'
-interval=once
-signal=10
+full_text=〉
+align=center
+color=#d5c4a1
+separator=false
+separator_block_width=1
+markup=pango
+
+[mediaplayer]
+label=🎵 
+command=mediaplayer
+interval=1
+
+[separator]
 
 [time]
 command=date +'%a %F %H:%M:%S'
 interval=1
+
+[separator]
+
+[caps-lock]
+label=<span size="x-large">C</span> 
+command=caps
+interval=once
+signal=10
+
+[num-lock]
+label=<span size="x-large">N</span>
+command=num
+interval=once
+signal=11
