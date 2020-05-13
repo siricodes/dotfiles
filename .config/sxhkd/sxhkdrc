@@ -1,5 +1,8 @@
 # Basic bindings
 ## Apps
+### browser
+super + shift + Return
+	$BROWSER
 ### dmenu
 super + d
 	dmenu_run
@@ -33,8 +36,8 @@ XF86Audio{Raise,Lower}Volume
 	amixer sset Master 5%{+,-}
 XF86Audio{Next,Prev}
 	mpc {next,prev}
-XF86Audio{Pause,Play,Stop}
-	mpc {pause,play,stop}
+XF86AudioPlay
+	mpc toggle
 XF86Audio{Rewind,Forward}
 	mpc seek {-,+}10
 XF86Tools
