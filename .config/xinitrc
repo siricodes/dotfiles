@@ -1,2 +1,2 @@
-[ -f ~/.xprofile ] && . ~/.xprofile
+[ -f $XDG_CONFIG_HOME/xprofile ] && . $XDG_CONFIG_HOME/xprofile
 ssh-agent i3
