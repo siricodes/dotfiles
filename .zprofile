@@ -4,9 +4,11 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 # Default applications
 export BROWSER="qutebrowser"
 export EDITOR="nvim"
+export MAIL="neomutt"
 export READER="zathura"
 export TERMINAL="st"
 export VIDEO="mpv"
+export VISUAL="nvim"
 
 # XDG standards (from LukeSmithXyz)
 eval "$(sed 's/^[^#].*/export &/g;t;d' ${HOME}/.config/user-dirs.dirs)"
