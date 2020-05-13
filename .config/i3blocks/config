@@ -12,6 +12,12 @@ interval=1
 
 [separator]
 
+[cpu]
+command=cpu
+interval=5
+
+[separator]
+
 [time]
 command=date +'%a %F %H:%M:%S'
 interval=1
