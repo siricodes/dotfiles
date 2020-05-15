@@ -7,13 +7,21 @@ endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'bling/vim-airline'
+Plug 'morhetz/gruvbox'
 call plug#end()
-
-" Basic config
-set relativenumber
-set number
 
 " Plugin config
 "
 " Airline
 let g:airline_powerline_fonts = 1
+" Gruvbox
+let g:gruvbox_contrast_dark= 'hard'
+
+" Basic config
+set relativenumber
+set number
+colorscheme gruvbox
+set termguicolors
+" Transparent vim even with gruvbox syntax highlighting
+highlight normal guibg=none ctermbg=none
+hi CursorLineNR guibg=none cterm=bold gui=bold
