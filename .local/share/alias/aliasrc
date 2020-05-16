@@ -1,6 +1,14 @@
 # Source other alias files
 source $XDG_DATA_HOME/alias/open
+## PARAMETERS
+# Basics
+alias c="clear"
+alias e=$EDITOR
 # Speedtest
 alias spd="speedtest --secure"
+# Picom
+alias picom="picom -b --experimental-backends"
+
+## MINI-SCRIPTS <3
 # Get qr code from screen
 alias qrscreen="maim | zbarimg -q --raw -"
