@@ -52,3 +52,10 @@
 *color19:      base02
 *color20:      base04
 *color21:      base06
+
+*font: monospace:size=10
+dwm.normbordercolor: base01
+dwm.normbgcolor: base02
+dwm.normfgcolor: base05
+*selbgcolor: base00 
+*selfgcolor: base0A
