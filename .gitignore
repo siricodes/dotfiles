@@ -18,6 +18,8 @@ cookie
 # 03. Vim
 .config/nvim/autoload
 .config/nvim/plugged
+# 04. zinit
+.config/zsh/zinit
 
 
 
