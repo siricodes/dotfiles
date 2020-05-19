@@ -1,36 +1,20 @@
-# The Simple X Hotkey Daemon is the program used by LARBS to map most of the
-# dwm-independent commands.  This file is pretty readable, so I'll let you read
-# it.
-
-# The keys NOT bound here by sxhkd, but by dwm or i3 are:
-# The t thru p keys on the top row
-# The f thru ; keys on the home row
-# The b key on the bottom row (hides the bar in either case)
-
-# Basic binds
-super + Return
-	$TERMINAL
+# Basic bindings
+## Apps
+### browser
+super + shift + Return
+	$BROWSER
+### dmenu
 super + d
 	dmenu_run
-super + m
-	$TERMINAL -e ncmpcpp
-super + shift + a
-	$TERMINAL -e alsamixer; pkill -RTMIN+10 dwmblocks
-super + shift + c
-	mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
-super + w
-	$TERMINAL -e sudo nmtui
-super + shift + w
-	$BROWSER
-
-# Et cetera...
-super + shift + Escape
-	prompt 'Leave Xorg?' 'killall Xorg'
-XF86MonBrightnessDown
-	xbacklight -dec 15
-XF86MonBrightnessUp
-	xbacklight -inc 15
-
+### copy-paste passwords
+super + o
+	dmenu-pass
+### emoji input
+super + p
+	dmenu-emoji-input
+### Terminal
+super + Return
+	$TERMINAL
 # Recording
 # Take screenshot
 Print
@@ -39,64 +23,33 @@ Print
 shift + Print
 	maimpick
 
-# Pause audio
-super + p
-	mpc toggle
-super + shift + p
-	mpc pause; pauseallmpv
-# Changes to next/previous tracks
-super + {comma,period}
-	mpc {prev,next}
-# Restart track
-super + shift + less
-	mpc seek 0%
-# Seek foward in song
-super + {_,shift +} bracketright
-	mpc seek +{10,120}
-# Seek backward in song
-super + {_,shift +} bracketleft
-	mpc seek -{10,120}
-# Increase volume
-super + {equal,plus}
-	amixer sset Master {5,15}%+; pkill -RTMIN+10 dwmblocks
-# Decrease volume
-super {_,shift +} + minus
-	amixer sset Master {5,15}%-; pkill -RTMIN+10 dwmblocks
-super + shift + m
-	amixer sset Master toggle; pkill -RTMIN+10 dwmblocks
 
-# Audiokeys
+## Lock
+super + x
+	i3lock
+
+# Special Keys
+## Brightness keys
+
+XF86MonBrightnessDown
+	xbacklight -dec 15
+XF86MonBrightnessUp
+	xbacklight -inc 15
+
+## Media keys
 XF86AudioMute
-	amixer sset Master toggle; pkill -RTMIN+10 dwmblocks
+	amixer sset Master toggle
 XF86Audio{Raise,Lower}Volume
-	amixer sset Master 5%{+,-}; pkill -RTMIN+10 dwmblocks
+	amixer sset Master 5%{+,-}
 XF86Audio{Next,Prev}
 	mpc {next,prev}
-XF86Audio{Pause,Play,Stop}
-	mpc {pause,play,stop}
+XF86AudioPlay
+	mpc toggle
 XF86Audio{Rewind,Forward}
 	mpc seek {-,+}10
-XF86AudioRecord
-	dmenurecord
-XF86AudioMedia
+XF86Tools
 	$TERMINAL -e ncmpcpp
 
-XF86PowerOff
-	prompt "Shutdown computer?" "sudo -A shutdown -h now"
-XF86Calculator
-	$TERMINAL -e bc
-XF86Sleep
-	prompt 'Hibernate computer?' 'sudo -A zzz'
-XF86WWW
-	$BROWSER
-XF86DOS
-	$TERMINAL
-XF86ScreenSaver
-	mpc pause; pauseallmpv; i3lock -e -f -c 1d2021; xset dpms force off
-XF86TaskPane
-	$TERMINAL -e htop
-XF86Mail
-	$TERMINAL -e neomutt
-XF86MyComputer
-	$TERMINAL -e $FILE /
-
+## Caps,Num lock
+@{Caps,Num}_Lock
+	pkill -RTMIN+{10,11} i3blocks 
