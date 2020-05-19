@@ -15,6 +15,7 @@ eval "$(sed 's/^[^#].*/export &/g;t;d' ${HOME}/.config/user-dirs.dirs)"
 
 # Set ZSH-related variables
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"		# Zsh config directory (zshrc)
+export ZINIT_HOME="$ZDOTDIR/zinit"
 
 # LF icons (from LukeSmithXyz)
 export LF_ICONS="di=📁:\
