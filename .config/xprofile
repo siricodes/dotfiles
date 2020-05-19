@@ -3,7 +3,7 @@
 [[ -f $XDG_CONFIG_HOME/xresources ]] && xrdb -merge $XDG_CONFIG_HOME/xresources	# load xresources
 
 picom -b --experimental-backends			# picom for transparency
-#dwmblocks &		# statusbar 
+dwmblocks &		# statusbar 
 dunst &			# notifications
 nm-applet &		# network
 udiskie --tray &	# automount
