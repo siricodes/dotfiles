@@ -32,15 +32,15 @@ super + x
 ## Brightness keys
 
 XF86MonBrightnessDown
-	xbacklight -dec 15
+	xbacklight -dec 15; pkill -RTMIN+11 dwmblocks
 XF86MonBrightnessUp
-	xbacklight -inc 15
+	xbacklight -inc 15; pkill -RTMIN+11 dwmblocks
 
 ## Media keys
 XF86AudioMute
 	amixer sset Master toggle
 XF86Audio{Raise,Lower}Volume
-	amixer sset Master 5%{+,-}
+	amixer sset Master 5%{+,-} ; pkill -RTMIN+10 dwmblocks
 XF86Audio{Next,Prev}
 	mpc {next,prev}
 XF86AudioPlay
