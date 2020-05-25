@@ -1,0 +1,6 @@
+#!/bin/sh
+# Get the brightness of the system
+SYMBOL=☀
+BRIGHTNESS=$(xbacklight | cut -d. -f1)
+PERCENT="%"
+echo $SYMBOL$BRIGHTNESS$PERCENT
