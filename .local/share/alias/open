@@ -4,4 +4,4 @@ book() {$READER $XDG_BOOKS_DIR/$1} ; compdef '_files -W $XDG_BOOKS_DIR' book
 vid() {$VIDEO $XDG_VIDEOS_DIR/$1} ; compdef '_files -W $XDG_VIDEOS_DIR' vid
 
 # Open mail
-mail() {$XDG_DATA_HOME/mail/$1} ; compdef '_files -W $XDG_DATA_HOME/mail/' mail
+mail() {neomutt $XDG_DATA_HOME/mail/$1} ; compdef '_files -W $XDG_DATA_HOME/mail/' mail
