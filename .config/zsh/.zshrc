@@ -30,6 +30,14 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 zinit ice pick"async.zsh" src"lambda-pure.zsh"
 zinit light marszall87/lambda-pure
+# fast completions
+zinit wait lucid for \
+	 atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+	     zdharma/fast-syntax-highlighting \
+	      blockf \
+	          zsh-users/zsh-completions \
+		   atload"!_zsh_autosuggest_start" \
+		       zsh-users/zsh-autosuggestions
 
 ### End of Zinit's installer chunk
 ## Syntax Highlighting
