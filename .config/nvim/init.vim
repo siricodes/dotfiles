@@ -8,6 +8,7 @@ endif
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'bling/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo'
 call plug#end()
 
 " Plugin config
@@ -25,3 +26,11 @@ set termguicolors
 " Transparent vim even with gruvbox syntax highlighting
 highlight normal guibg=none ctermbg=none
 hi CursorLineNR guibg=none cterm=bold gui=bold
+
+" Automatic actions
+" Auto-refresh after config
+augroup vimrc     " Source vim configuration upon save
+    autocmd! BufWritePost init.vim source % | echom "Reloaded init.vim" 
+  augroup END
+au BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+au BufWritePost *Xresources,*Xdefaults !xrdb %

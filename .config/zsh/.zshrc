@@ -28,12 +28,11 @@ zinit light-mode for \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
-zinit ice pick"async.zsh" src"lambda-pure.zsh"
-zinit light marszall87/lambda-pure
+<<<<<<< HEAD
+
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
 
 ### End of Zinit's installer chunk
-## Syntax Highlighting
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+>>>>>>> dwm

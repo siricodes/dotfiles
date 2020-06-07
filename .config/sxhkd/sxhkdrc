@@ -6,15 +6,17 @@ super + shift + Return
 ### dmenu
 super + d
 	dmenu_run
-### copy-paste passwords
-super + o
-	dmenu-pass
-### emoji input
-super + p
+super + control + grave
 	dmenu-emoji-input
+super + control + 1
+	dmenu-pass
+super + F1
+	st neomutt
+
 ### Terminal
 super + Return
 	$TERMINAL
+
 # Recording
 # Take screenshot
 Print
@@ -26,7 +28,9 @@ shift + Print
 
 ## Lock
 super + x
-	i3lock
+	slock
+super + shift + x
+	dmenu-shutdown
 
 # Special Keys
 ## Brightness keys
@@ -38,7 +42,7 @@ XF86MonBrightnessUp
 
 ## Media keys
 XF86AudioMute
-	amixer sset Master toggle
+	amixer sset Master toggle; pkill -RTMIN+10 dwmblocks
 XF86Audio{Raise,Lower}Volume
 	amixer sset Master 5%{+,-} ; pkill -RTMIN+10 dwmblocks
 XF86Audio{Next,Prev}
