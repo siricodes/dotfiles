@@ -30,6 +30,16 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma/fast-syntax-highlighting \
+ blockf \
+    zsh-users/zsh-completions \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
+#zinit light chriskempson/base16-shell
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
 
 ### End of Zinit's installer chunk
 
