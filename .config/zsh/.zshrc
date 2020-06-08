@@ -28,11 +28,17 @@ zinit light-mode for \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
-<<<<<<< HEAD
+# fast completions
+zinit wait lucid for \
+	 atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+	     zdharma/fast-syntax-highlighting \
+	      blockf \
+	          zsh-users/zsh-completions \
+		   atload"!_zsh_autosuggest_start" \
+		       zsh-users/zsh-autosuggestions
 
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
 ### End of Zinit's installer chunk
 
->>>>>>> dwm
