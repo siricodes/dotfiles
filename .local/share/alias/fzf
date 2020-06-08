@@ -1,0 +1,5 @@
+# documents
+alias docs="find $HOME/Documents -type f | fzf | xargs $EDITOR"
+# videos
+alias vids="find $HOME/Videos -type f | fzf --print0 -d \/ -n 2..| xargs -0 mpv"
+

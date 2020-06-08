@@ -4,6 +4,8 @@ source $XDG_DATA_HOME/alias/open
 # Basics
 alias c="clear"
 alias e=$EDITOR
+# FZF
+source $XDG_DATA_HOME/alias/fzf
 # Speedtest
 alias spd="speedtest --secure"
 # Picom
