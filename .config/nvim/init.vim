@@ -31,6 +31,12 @@ hi CursorLineNR guibg=none cterm=bold gui=bold
 " Auto-refresh after config
 augroup vimrc     " Source vim configuration upon save
     autocmd! BufWritePost init.vim source % | echom "Reloaded init.vim" 
-  augroup END
-au BufWritePost *sxhkdrc !pkill -USR1 sxhkd
-au BufWritePost *Xresources,*Xdefaults !xrdb %
+augroup END
+
+augroup hotkey
+	au BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+augroup END
+
+augroup xresources
+	au BufWritePost *Xresources,*Xdefaults !xrdb %
+augroup END
