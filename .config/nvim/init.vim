@@ -6,9 +6,11 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-airline'
-Plug 'morhetz/gruvbox'
-Plug 'junegunn/goyo'
+Plug 'dawikur/base16-vim-airline-themes'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 call plug#end()
 
 " Plugin config
@@ -16,16 +18,17 @@ call plug#end()
 " Airline
 let g:airline_powerline_fonts = 1
 " Gruvbox
-let g:gruvbox_contrast_dark= 'hard'
+" let g:gruvbox_contrast_dark= 'hard'
 
 " Basic config
 set relativenumber
 set number
-colorscheme gruvbox
+colorscheme base16-one-light
 set termguicolors
 " Transparent vim even with gruvbox syntax highlighting
-highlight normal guibg=none ctermbg=none
-hi CursorLineNR guibg=none cterm=bold gui=bold
+" highlight normal guibg=none ctermbg=none
+" hi CursorLineNR guibg=none cterm=bold gui=bold
+
 
 " Automatic actions
 " Auto-refresh after config
@@ -34,9 +37,11 @@ augroup vimrc     " Source vim configuration upon save
 augroup END
 
 augroup hotkey
-	au BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+	au! BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 augroup END
 
 augroup xresources
-	au BufWritePost *Xresources,*Xdefaults !xrdb %
+	au! BufWritePost *Xresources,*Xdefaults !xrdb %
 augroup END
+
+" Bindings
